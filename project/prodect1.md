@@ -27,7 +27,7 @@ Apart for this requirements, Ms Sato is open to explore a cryptocurrency selecte
 | Amine  |  KLIMA          |   |      |      |
 
 | Dylan  | Monero XMR    |   |      |      |
-| Yoshi  | Shiba Inu (SHIB)    |   |      |      |
+| Agatha | Shiba Inu (SHIB)    |   |      |      |
 
 
 An example of the data stored is 
