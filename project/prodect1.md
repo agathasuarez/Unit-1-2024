@@ -83,8 +83,6 @@ ef try_login(name: str, password: str) -> bool:
 
     return False
 
-end_code = "\033[00m"
-
 # Testing
 attempts = 3
 result = False
