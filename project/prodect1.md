@@ -111,11 +111,17 @@ print("Welcome")
 
 _ All colors for using during the code
     blue ="\33[1;94m"
+    
     green = "\33[1;92m"
+    
     red = "\33[1;91m"
+    
     yellow = "\33[1;93m"
+    
     cyan = "\33[1;96m"
+    
     white ="\33[1;97m"
+    
     purple = "\33[1;95m"
 
 _ Function ERROR which will be used if user enter data with a mistake 
