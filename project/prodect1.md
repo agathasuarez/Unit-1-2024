@@ -109,6 +109,39 @@ else:
     exit(1)
 print("Welcome")
 
+_ All colors for using during the code
+blue ="\33[1;94m"
+green = "\33[1;92m"
+red = "\33[1;91m"
+yellow = "\33[1;93m"
+cyan = "\33[1;96m"
+white ="\33[1;97m"
+purple = "\33[1;95m"
+
+_ Function ERROR which will be used if user enter data with a mistake 
+def error():
+    print(f"{red}ERROR{red}\nThe option is missing, try again")
+    menu()
+
+_ Function BYE  wich will be used if a user want to leave program
+def bye ():
+    print ("Goodbye")
+
+_Function GO TO MENU which will be used after every step. User ia able to retern to menu without entering login/password every time
+def go_m():
+    m = input("Do you want to go to the main menu? Yes/No: ").lower()
+    if m == "yes":
+        menu()
+    elif m == "no":
+        print ("You are logged out")
+        end_code = "\033[00m"
+        color = "\33[1;91m"
+        print (f"{color}Goodbye{end_code}")
+    else:
+        error()
+
+
+
 
 
 ```
