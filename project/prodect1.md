@@ -70,22 +70,47 @@ Justify the tools/structure of your solution
 # Criteria C: Development
 
 ## Login System
-My client requires a system to protect the private data. I thought about using a login system to accomplish this requirement using a if condition and the open command to work with a csv file. More description of the code....
-
-
-First step in a wallet. Registration og login and password. Take log and pass from users.csv only.
-``
-def try_login(name: str, password: str) -> bool:
+Part of the code that is responsible for opening the program using the correct login and password. All correct logins and passwords are saved in users.csv
+ef try_login(name: str, password: str) -> bool:
     with open('users.csv', mode='r') as f:
         data = f.readlines()
-
-    success = False
     for line in data:
-        uname, upass = line.strip().split(',')
-        if uname == name and upass == password:
-            success = True
-            break
-    return success
+        parts = line.strip().split(',')
+        if len(parts) == 2:
+            uname, upass = parts
+            if uname == name and upass == password:
+                return True
+
+    return False
+
+end_code = "\033[00m"
+
+# Testing
+attempts = 3
+result = False
+
+while attempts > 0:
+    in_name = input("Enter your username: ")
+    in_pass = input("Enter your password: ")
+    result = try_login(name=in_name, password=in_pass)
+
+    if result:
+        break
+    else:
+        attempts -= 1
+        if attempts > 0:
+            print(f"[ERROR] Incorrect username or password. {attempts} attempts remaining.")
+        else:
+            print("No attempts remaining. Goodbye.")
+
+if result:
+    print("Login successful!")
+else:
+    print("Login unsuccessful.")
+
+    exit(1)
+print("Welcome")
+
 
 
 ```
