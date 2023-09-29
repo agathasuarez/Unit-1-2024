@@ -71,45 +71,31 @@ Justify the tools/structure of your solution
 
 ## Login System
 Part of the code that is responsible for opening the program using the correct login and password. All correct logins and passwords are saved in users.csv
-ef try_login(name: str, password: str) -> bool:
+
+    def try_login(name: str, password: str) -> bool:
+    
     with open('users.csv', mode='r') as f:
+    
         data = f.readlines()
+        
     for line in data:
+    
         parts = line.strip().split(',')
+        
         if len(parts) == 2:
+        
             uname, upass = parts
+            
             if uname == name and upass == password:
+            
                 return True
 
     return False
 
 # Testing
-attempts = 3
-result = False
 
-while attempts > 0:
-    in_name = input("Enter your username: ")
-    in_pass = input("Enter your password: ")
-    result = try_login(name=in_name, password=in_pass)
+1). All colors for using during the code
 
-    if result:
-        break
-    else:
-        attempts -= 1
-        if attempts > 0:
-            print(f"[ERROR] Incorrect username or password. {attempts} attempts remaining.")
-        else:
-            print("No attempts remaining. Goodbye.")
-
-if result:
-    print("Login successful!")
-else:
-    print("Login unsuccessful.")
-
-    exit(1)
-print("Welcome")
-
-_ All colors for using during the code
     blue ="\33[1;94m"
     
     green = "\33[1;92m"
@@ -124,12 +110,12 @@ _ All colors for using during the code
     
     purple = "\33[1;95m"
 
-_ Function ERROR which will be used if user enter data with a mistake 
+2). Function ERROR which will be used if user enter data with a mistake 
 def error():
     print(f"{red}ERROR{red}\nThe option is missing, try again")
     menu()
 
-_ Function BYE  wich will be used if a user want to leave program
+3). Function BYE  wich will be used if a user want to leave program
 def bye ():
     print ("Goodbye")
 
