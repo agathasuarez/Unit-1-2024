@@ -25,9 +25,8 @@ Apart for this requirements, Ms Sato is open to explore a cryptocurrency selecte
 | Yosuke  | USD COIN  (USDC)  |   |      |      |
 | Naomi  |  TRX Tron       |   |      |      |
 | Amine  |  KLIMA          |   |      |      |
-
-| Dylan  | Monero XMR    |   |      |      |
-| Agatha | Shiba Inu (SHIB)    |   |      |      |
+| Dylan  | Monero XMR      |   |      |      |
+| Agatha | Shiba Inu (SHIB)|   |      |      |
 
 
 An example of the data stored is 
