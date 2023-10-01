@@ -122,26 +122,24 @@ Part of the code that is responsible for opening the program using the correct l
     purple = "\33[1;95m"
 
 2). Function ERROR which will be used if user enter data with a mistake 
-def error():
-    print(f"{red}ERROR{red}\nThe option is missing, try again")
-    menu()
 
-3). Function BYE  wich will be used if a user want to leave program
-def bye ():
-    print ("Goodbye")
-
-_Function GO TO MENU which will be used after every step. User ia able to retern to menu without entering login/password every time
-def go_m():
-    m = input("Do you want to go to the main menu? Yes/No: ").lower()
-    if m == "yes":
+    def error():
+        print(f"{red}ERROR{red}\nThe option is missing, try again")
         menu()
-    elif m == "no":
-        print ("You are logged out")
-        end_code = "\033[00m"
-        color = "\33[1;91m"
-        print (f"{color}Goodbye{end_code}")
-    else:
-        error()
+
+
+3). Function GO TO MENU which will be used after every step. User is able to retern to menu without entering login/password every time
+    def go_m():
+        m = input("Do you want to go to the main menu? Yes/No: ").lower()
+        if m == "yes":
+            menu()
+        elif m == "no":
+            print ("You are logged out")
+            end_code = "\033[00m"
+            color = "\33[1;91m"
+            print (f"{color}Goodbye{end_code}")
+        else:
+            error()
 
 
 
