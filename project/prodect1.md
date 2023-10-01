@@ -65,15 +65,10 @@ Justify the tools/structure of your solution
 ## Record of Tasks
 | Task No | Planned Action | Time estimate | Target completion | date | Criterion |
 
-| 1       | Create options and design for menu |               | 40min         | Sep 18  | b,c            
-
-| 2       | Create main functions (go menu, error, goodbue), colors for all program        c                 | 90min         | Sep 20              
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Create options and design for menu  |               | 40min         | Sep 18  | b,c   |        
+| 2       | Create main functions (go menu, error, goodbue), colors for all program|    | 90min         | Sep 20 | b,c|     
 | 3       | Create function exchanging for option 2 , c                 | 90min         | Sep 21              
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
-| 4       | Create option "view account"        c                 | 10min         | Sep 22              
+| 4       | Create option "view account" |  | 10min  | Sep 22 | c|             
 -------------------------------------------------|---------------|------------------------|-----------|
 -------------------------------------------------|---------------|------------------------|-----------|
 | 5       | Create options "top up account" and "Funds transfer"        c                 | 80min         | Sep 23              
