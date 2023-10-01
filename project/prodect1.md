@@ -63,25 +63,18 @@ Justify the tools/structure of your solution
 
 
 ## Record of Tasks
-| Task No | Planned Action | Time estimate | Target completion | date | Criterion |
 
-| 1       | Create options and design for menu  |               | 40min         | Sep 18  | b,c   |        
-| 2       | Create main functions (go menu, error, goodbue), colors for all program|    | 90min         | Sep 20 | b,c|     
-| 3       | Create function exchanging for option 2 , c                 | 90min         | Sep 21              
-| 4       | Create option "view account" |  | 10min  | Sep 22 | c|             
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
-| 5       | Create options "top up account" and "Funds transfer"        c                 | 80min         | Sep 23              
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
-| 6       | Create option "Transaction history"        c                 | 40min         | Sep 26              
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
-| 7       | Create option "TAdd a new account"        c                 | 30min         | Sep 27              
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
-| 8       | Add colors         c                 | 20min         | Sep 28              
--------------------------------------------------|---------------|------------------------|-----------|
+
+| Task No  | Planned Action | Time estimate | date |  criterion  |
+|------|-------------|----------|---------| --------|
+| 1       | Create options and design for menu| 40min  | Sep 18  | b,c   |       
+| 2       | Create main functions (go menu, error, goodbue), colors for all program| 90min         | Sep 20 | b,c|     
+| 3       | Create function exchanging for option 2 | 90min | Sep 21 | c|             
+| 4       | Create option "view account" | 10min  | Sep 22 | c|             
+| 5       | Create options "top up account" and "Funds transfer"  |  80min         | Sep 23 |c|        
+| 6       | Create option "Transaction history" | 40min         | Sep 26  |c|            
+| 7       | Create option "TAdd a new account" | 30min         | Sep 27|c|
+| 8       | Add colors    |   20min         | Sep 28   |b|           
 
 # Criteria C: Development
 
