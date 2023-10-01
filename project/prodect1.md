@@ -63,11 +63,10 @@ Justify the tools/structure of your solution
 
 
 ## Record of Tasks
-| Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
-|---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
-| 1       | Create options and design for menu        b, c                 | 40min         | Sep 18              
--------------------------------------------------|---------------|------------------------|-----------|
--------------------------------------------------|---------------|------------------------|-----------|
+| Task No | Planned Action | Time estimate | Target completion | date | Criterion |
+
+| 1       | Create options and design for menu |               | 40min         | Sep 18  | b,c            
+
 | 2       | Create main functions (go menu, error, goodbue), colors for all program        c                 | 90min         | Sep 20              
 -------------------------------------------------|---------------|------------------------|-----------|
 -------------------------------------------------|---------------|------------------------|-----------|
