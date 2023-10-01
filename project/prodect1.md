@@ -40,7 +40,7 @@ An example of the data stored is
 ## Proposed Solution
 
 Design statement:
-I will to design and make a ———— for a client who is ———. The ——– will about ———— and is constructed using the software ———. It will take  ———- to make and will be evaluated according to the criteria ———.
+I will to design and make a easy to use electronic ledger for a client who is an ordinary person, so the wallet will use as simple vocabulary as possible, attractive design and perform main functions. To meet all these requirements python will be used as the programming language. It will take 30 hours to make and will be evaluated according to the criteria "Design" and "Development" .
 
 ** add a description of your coin and citation **
 
