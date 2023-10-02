@@ -66,18 +66,20 @@ Shiba Inu is coin for this project. This cryptocurrency was created in August 20
 
 | Task No  | Planned Action | Time estimate | date |  criterion  |
 |------|-------------|----------|---------| --------|
-| 1       | Create available options| 40min  | Sep 18  | b   | 
-|2| Think about program and write Success Criteria| 30min|Sep 18|a| 
-|3| Create desine for main menu|30min| Sep 18|c|
-| 4       | Create main functions for use throughout the program (go menu, error, goodbye)| 90min         | Sep 20 | c|    
-|5 |Add all available colors for  for program design|20 min| Sep 21|b| 
-| 6       | Create function "exchanging" for option 2 | 90min | Sep 21 | c|             
-| 7       | Create option "view account" | 10min  | Sep 22 | c|             
-| 8       | Create options "top up account" and "Funds transfer"  |  80min         | Sep 23 |c|        
-| 9       | Create option "Transaction history" | 40min         | Sep 26  |c|            
-| 10       | Create option "Add a new account" | 30min         | Sep 27|c|
-| 11       | Add colors    |   20min         | Sep 28   |b| 
-|12| Add code to show amounts in 5 currency | 20min|Sep29|c|
+|1 | Think about program and write Success Criteria| 30min|Sep 18|a| 
+|2 | Create available options| 40min  | Sep 18  |b|  
+|3 | Create desine for main menu|30min| Sep 18|c|
+|4 | Create main functions "go menu" which allowes to go to maim menu after all actions| 20min| Sep 20 | c| 
+|5 |Add new function "error" which used when user enter wrng data |10 min| Sep 21|c| 
+|6 |Add new function "bye"|10 min| Sep 21|c| 
+|7 |Add all available colors for  for program design|20 min| Sep 21|b| 
+|8 | Create function "exchanging" for option 2 | 90min | Sep 21 | c|             
+|9 | Create option "view account" | 10min  | Sep 22 | c|             
+|10 | Create options "top up account" and "Funds transfer"  |  80min         | Sep 23 |c|        
+|11| Create option "Transaction history" | 40min         | Sep 26  |c|            
+|12| Create option "Add a new account" | 30min         | Sep 27|c|
+|13 Add colors    |   20min         | Sep 28   |b| 
+|14| Add code to show amounts in 5 currency | 20min|Sep29|c|
 
 # Criteria C: Development
 
@@ -127,21 +129,6 @@ Part of the code that is responsible for opening the program using the correct l
     def error():
         print(f"{red}ERROR{red}\nThe option is missing, try again")
         menu()
-
-
-3). Function GO TO MENU which will be used after every step. User is able to retern to menu without entering login/password every time
-    def go_m():
-        m = input("Do you want to go to the main menu? Yes/No: ").lower()
-        if m == "yes":
-            menu()
-        elif m == "no":
-            print ("You are logged out")
-            end_code = "\033[00m"
-            color = "\33[1;91m"
-            print (f"{color}Goodbye{end_code}")
-        else:
-            error()
-
 
 
 
