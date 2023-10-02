@@ -50,7 +50,7 @@ Shiba Inu is coin for this project. This cryptocurrency was created in August 20
 2. The electronic ledger display the basic description of the cyrptocurrency selected.
 3. The electronic ledger allows to enter, withdraw and record transactions.
 4. The electronic ledger allowed to create new data for entry
-5. The electronic ledger showed every amount in 4 currencies
+5. The electronic ledger showed every amount in 5 currencies
 6. The electronic ledger has design and construction which are developed for maximum ease of use
 
 # Criteria B: Design
