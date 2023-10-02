@@ -70,13 +70,14 @@ Shiba Inu is coin for this project. This cryptocurrency was created in August 20
 |2| Think about program and write Success Criteria| 30min|Sep 18|a| 
 |3| Create desine for main menu|30min| Sep 18|c|
 | 4       | Create main functions for use throughout the program (go menu, error, goodbye)| 90min         | Sep 20 | c|    
-|5 Add all available colors for  for program design|20 min| Sep 21|b| 
+|5 |Add all available colors for  for program design|20 min| Sep 21|b| 
 | 6       | Create function "exchanging" for option 2 | 90min | Sep 21 | c|             
 | 7       | Create option "view account" | 10min  | Sep 22 | c|             
 | 8       | Create options "top up account" and "Funds transfer"  |  80min         | Sep 23 |c|        
 | 9       | Create option "Transaction history" | 40min         | Sep 26  |c|            
-| 10       | Create option "TAdd a new account" | 30min         | Sep 27|c|
-| 11       | Add colors    |   20min         | Sep 28   |b|           
+| 10       | Create option "Add a new account" | 30min         | Sep 27|c|
+| 11       | Add colors    |   20min         | Sep 28   |b| 
+|12| Add code to show amounts in 5 currency | 20min|Sep29|c|
 
 # Criteria C: Development
 
