@@ -1,0 +1,5 @@
+def a(s, v):
+    result = s + v
+    print(result)
+
+a(10, 20)
