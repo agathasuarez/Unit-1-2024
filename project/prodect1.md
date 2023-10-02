@@ -56,7 +56,7 @@ Shiba Inu is coin for this project. This cryptocurrency was created in August 20
 # Criteria B: Design
 
 ## System Diagram
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Image alt](https://github.com(https://github.com/agathasuarez/Unit-1-2024/blob/main/project/Image_20231002_223238_091.jpeg)
 
 ## Flow Diagrams
 
