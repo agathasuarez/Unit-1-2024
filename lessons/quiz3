@@ -1,0 +1,14 @@
+def DNAtranslator (i :str):
+    if i == "a":
+        o ="t"
+    if i == "g":
+        o = "c"
+    if i == "t":
+        o = "a"
+    if i == "c":
+        o = "g"
+    return o
+
+
+test1 = DNAtranslator('g')
+print("the output is ", test1)
