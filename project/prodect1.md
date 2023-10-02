@@ -42,9 +42,8 @@ An example of the data stored is
 Design statement:
 I will to design and make a easy to use electronic ledger for a client who is an ordinary person, so the wallet will use as simple vocabulary as possible, attractive design and perform main functions. To meet all these requirements python will be used as the programming language. It will take 30 hours to make and will be evaluated according to the criteria "Design" and "Development" .
 
-Shiba Inu is coin for this project. This was created in August 2020 by an anonymous person.  Shiba Inu is a Japanese dog breed.
+Shiba Inu is coin for this project. This cryptocurrency was created in August 2020 by an anonymous person.  Shiba-inu is a Japanese breed of dog, and this name was used for the name of the currency. 1 SHIB = 0.0000074 USD
 
-Justify the tools/structure of your solution
 
 ## Success Criteria
 1. The electronic ledger is a text-based software (Runs in the Terminal).
@@ -52,7 +51,7 @@ Justify the tools/structure of your solution
 3. The electronic ledger allows to enter, withdraw and record transactions.
 4. The electronic ledger allowed to create new data for entry
 5. The electronic ledger showed every amount in 4 currencies
-6. The electronic ledger allows to transfer money to any users
+6. The electronic ledger has design and construction which are developed for maximum ease of use
 
 # Criteria B: Design
 
