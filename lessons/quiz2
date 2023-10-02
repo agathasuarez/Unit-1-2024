@@ -1,0 +1,6 @@
+a = int(input("enter number"))
+b= int(input("enter number"))
+if b==20 or a==20 or a+b== 20:
+    print ("True")
+else:
+    print ("False")
