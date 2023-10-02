@@ -78,7 +78,7 @@ Shiba Inu is coin for this project. This cryptocurrency was created in August 20
 |10 | Create options "top up account" and "Funds transfer"  |  80min         | Sep 23 |c|        
 |11| Create option "Transaction history" | 40min         | Sep 26  |c|            
 |12| Create option "Add a new account" | 30min         | Sep 27|c|
-|13 Add colors    |   20min         | Sep 28   |b| 
+|13 |Add colors    |   20min         | Sep 28   |b| 
 |14| Add code to show amounts in 5 currency | 20min|Sep29|c|
 
 # Criteria C: Development
