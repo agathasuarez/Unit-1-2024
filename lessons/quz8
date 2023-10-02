@@ -1,0 +1,26 @@
+import random
+
+# ... (your other code)
+
+secret_number = random.randint(1, 100)
+cover_game = frame_maker(msg=title, symbol="#", spaces=40)
+print(cover_game)
+#the guessing number game
+#pick a random number 1-100
+import random
+
+secret_number = random.randint (1,100)
+#count how many tries it took the user
+count = 0
+#ask the user fr a number, indicate if it is bigger or smaller than secret number
+guess = int (input ("please enter a guess (1-100): "))
+while guess != secret_number:
+    if guess > secret_number:
+        print("too big")
+    elif guess == secret_number:
+        print ("its right")
+    else:
+        print("too small")
+    guess = int(input("please enter a guess (1-100): "))
+
+guess = int
