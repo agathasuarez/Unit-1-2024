@@ -162,9 +162,15 @@ def top_up():
 4). Function new_account let user to create new login data: 
 
 def new_account():
+
     n_login = input("Enter a new login:\n")
+    
     n_password = input("Enter a new password:\n ")
+    
     with open("users.csv", "a") as f:
+    
         f.write(f"\n{n_login},{n_password}\n")
+        
     print(f"{purple}You created a new account{end_code}")
+    
     go_m()
