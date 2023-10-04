@@ -130,7 +130,40 @@ Part of the code that is responsible for opening the program using the correct l
         print(f"{red}ERROR{red}\nThe option is missing, try again")
         menu()
 
+3). Function "Top up" lets a user to deposit money into the account and save this information in trancaktion :
+def top_up():
+    s = float(input("What amount do you want to deposit in your account?\n"))
 
+    with open("balances.csv", "r") as f:
+        balance = f.readlines()
+        your_balance = float(balance[0]) if balance else 0.0
+        new_balance = your_balance + s
 
+    with open("balances.csv", "w") as f:
+        f.write(str(new_balance))
+    usd = new_balance * 0.00000738
+    usd = round(usd, 5)
+    euro = new_balance * (0.00000738 * 0.94)
+    euro = round(euro, 5)
+    jpy = new_balance * (0.00000738 * 147.66)
+    jpy = round(jpy, 5)
+    byn = new_balance * (0.000007380 * 2.5)
+    byn = round(byn, 5)
+    print(f"You topped up account by: {white}{new_balance}{end_code} SHIBA")
+    print(f"Your balance now:\n{white}{new_balance}{end_code} SHIBA\n"
+          f"{green}{usd}{end_code} USD\n"
+          f"{blue}{euro}{end_code} EURO\n"
+          f"{yellow}{jpy}{end_code} JPY\n"
+          f"{red}{byn}{end_code} BYN")
 
-```
+    with open("transaction.history.csv", "w") as f:
+        f.write(f"\nYou topped up the account by {s} SHIBA")
+
+4). Function new_account let user 
+def new_account():
+    n_login = input("Enter a new login:\n")
+    n_password = input("Enter a new password:\n ")
+    with open("users.csv", "a") as f:
+        f.write(f"\n{n_login},{n_password}\n")
+    print (f"{purple}You created a new account{end_code}")
+    go_m()
