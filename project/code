@@ -1,0 +1,258 @@
+def try_login(name: str, password: str) -> bool:
+    with open('users.csv', mode='r') as f:
+        data = f.readlines()
+
+    for line in data:
+        parts = line.strip().split(',')
+        if len(parts) == 2:
+            uname, upass = parts
+            if uname == name and upass == password:
+                return True
+
+    return False
+
+attempts = 3
+while attempts > 0:
+    in_name = input("Enter your username: ")
+    in_pass = input("Enter your password: ")
+    result = try_login(name=in_name, password=in_pass)
+
+    if result:
+        print("Login successful!")
+        print("Welcome")
+        break
+    else:
+        attempts -= 1
+        if attempts > 0:
+            print(f"[ERROR] Incorrect username or password. {attempts} attempts remaining.")
+        else:
+            print("No attempts remaining. Goodbye.")
+
+if not result:
+    print("Login unsuccessful.")
+    exit(1)
+
+blue ="\33[1;94m"
+green = "\33[1;92m"
+red = "\33[1;91m"
+yellow = "\33[1;93m"
+cyan = "\33[1;96m"
+white ="\33[1;97m"
+purple = "\33[0;95m"
+end_code = "\033[00m"
+def error():
+    print(f"{red}ERROR{end_code}\nThe option is missing, try again")
+    menu()
+def bye():
+    print("Goodbye")
+def go_m():
+    m = input("Do you want to go to the main menu? Yes/No: ").lower()
+    if m == "yes":
+        menu()
+    elif m == "no":
+        print("You are logged out")
+        end_code = "\033[00m"
+        color = "\33[1;91m"
+        print(f"{color}Goodbye{end_code}")
+def exchanging():
+    currency = float(input(f"Please enter the currency:\n1 - {green}USD{end_code}\n2 - {blue}EURO{end_code}\n3 - {yellow}JPY{end_code}\n4 - {red}BYN{end_code}\n5 - Go to main menu\n"))
+
+    yellow_color = "\33[1;93m"
+
+    if currency == 1:
+        amount = float(input("Please enter the amount of SHIBA you want to convert: "))
+        usd = amount * 0.00000738
+        usd = round(usd, 5)
+        print(f"{yellow_color}{amount} SHIBA = {usd} USD{end_code}")
+        go_m()
+    elif currency == 2:
+        amount = float(input("Please enter the amount of SHIBA you want to convert: "))
+        euro = amount * (0.00000738 * 0.94)
+        euro = round(euro, 5)
+        print(f"{green}{amount} SHIBA = {euro} EURO{end_code}")
+        go_m()
+    elif currency == 3:
+        amount = float(input("Please enter the amount of SHIBA you want to convert: "))
+        jpy = amount * (0.00000738 * 147.66)
+        jpy = round(jpy, 5)
+        print(f"{blue}{amount} SHIBA = {jpy} JPY {end_code}")
+        go_m()
+    elif currency == 4:
+        amount = float(input("Please enter the amount of SHIBA you want to convert: "))
+        byn = amount * (0.000007380 * 2.5)
+        byn = round(byn, 5)
+        print(f"{red}{amount} SHIBA = {byn} BYN {end_code}")
+        go_m()
+    elif currency == 5:
+
+        menu()
+    else:
+        print("error")
+        go_m()
+
+def new_account():
+    n_login = input("Enter a new login:\n")
+    n_password = input("Enter a new password:\n ")
+    with open("users.csv", "a") as f:
+        f.write(f"\n{n_login},{n_password}\n")
+    print(f"{purple}You created a new account{end_code}")
+    go_m()
+def balance():
+    with open("balances.csv", "r") as f:
+        balance_str = f.read().strip()
+        new_balance = float(balance_str)
+        usd = new_balance * 0.00000738
+        usd = round(usd, 5)
+        euro = new_balance * (0.00000738 * 0.94)
+        euro = round(euro, 5)
+        jpy = new_balance * (0.00000738 * 147.66)
+        jpy = round(jpy, 5)
+        byn = new_balance * (0.000007380 * 2.5)
+        byn = round(byn, 5)
+        print(f"Your balance:\n{white}{new_balance}{end_code} SHIBA\n"
+            f"{green}{usd}{end_code} USD\n"
+            f"{blue}{euro}{end_code} EURO\n"
+            f"{yellow}{jpy}{end_code} JPY\n"
+            f"{red}{byn}{end_code} BYN")
+        ch = input(f"\n\n{cyan}1{end_code} Top up account\n{purple}2{end_code} Go to main menu\nEnter your choice: ")
+
+        if ch == 1:
+            top_up()
+            go_m()
+        elif ch == 2:
+            menu()
+        else:
+            error()
+
+
+def top_up():
+    s = float(input("What amount do you want to deposit in your account?\n"))
+
+    with open("balances.csv", "r") as f:
+        balance = f.readlines()
+        your_balance = float(balance[0]) if balance else 0.0
+        new_balance = your_balance + s
+
+    with open("balances.csv", "w") as f:
+        f.write(str(new_balance))
+    usd = new_balance * 0.00000738
+    usd = round(usd, 5)
+    euro = new_balance * (0.00000738 * 0.94)
+    euro = round(euro, 5)
+    jpy = new_balance * (0.00000738 * 147.66)
+    jpy = round(jpy, 5)
+    byn = new_balance * (0.000007380 * 2.5)
+    byn = round(byn, 5)
+    print(f"You topped up account by: {white}{new_balance}{end_code} SHIBA")
+    print(f"Your balance now:\n{white}{new_balance}{end_code} SHIBA\n"
+          f"{green}{usd}{end_code} USD\n"
+          f"{blue}{euro}{end_code} EURO\n"
+          f"{yellow}{jpy}{end_code} JPY\n"
+          f"{red}{byn}{end_code} BYN")
+
+    with open("transaction.history.csv", "w") as f:
+        f.write(f"\nYou topped up the account by {s} SHIBA")
+def menu():
+    color = "\33[1;96m"
+    amount = '-' * 10
+    print(f"{cyan}---------------------------{cyan}".center(45))
+    print(f"{white}MENY ฅ^•ﻌ•^ฅ{end_code}".center(40))
+    print(f"{cyan}---------------------------{cyan}{end_code}".center(50))
+    options = (
+        f"{white}1{end_code}  SHIBA exchange rate",
+        f"{yellow}2{end_code}  View account",
+        f"{green}3{end_code}  Top up account",
+        f"{cyan}4{end_code}  Funds transfer",
+        f"{blue}5{end_code}  Transaction history",
+        f"{purple}6{end_code}  Add a new account",
+        f"{red}7{end_code}  Exit"
+    )
+    for option in options:
+        print(option)
+
+    op = input("Enter a number of your choosing here: ")
+    op = int(op)
+
+    if op == 1:
+        exchanging()
+
+
+    elif op == 2:
+
+        with open("balances.csv", "r") as f:
+            balance_str = f.read().strip()
+            new_balance = float(balance_str)
+            usd = new_balance * 0.00000738
+            usd = round(usd, 5)
+            euro = new_balance * (0.00000738 * 0.94)
+            euro = round(euro, 5)
+            jpy = new_balance * (0.00000738 * 147.66)
+            jpy = round(jpy, 5)
+            byn = new_balance * (0.000007380 * 2.5)
+            byn = round(byn, 5)
+            print(f"Your balance:\n{white}{new_balance}{end_code} SHIBA\n"
+                  f"{green}{usd}{end_code} USD\n"
+                  f"{blue}{euro}{end_code} EURO\n"
+                  f"{yellow}{jpy}{end_code} JPY\n"
+                  f"{red}{byn}{end_code} BYN")
+            ch = input(
+                f"\n\n{cyan}1{end_code} Top up account\n{purple}2{end_code} Go to main menu\nEnter your choice: ")
+
+            if ch == 1:
+                top_up()
+                go_m()
+            elif ch == 2:
+                menu()
+            else:
+                error()
+
+    elif op == 3:
+        top_up()
+        go_m()
+    elif op == 4:
+        tr_money = float(input("What amount do you want to transfer?\n"))
+        person = input("Who do you want to transfer money to?\nEnter name:")
+
+        with open("balances.csv", "r") as f:
+            balance = f.readlines()
+            your_balance = float(balance[0]) if balance else 0.0
+            new_balance = your_balance - tr_money
+
+        with open("balances.csv", "w") as f:
+            f.write(str(new_balance))
+
+        usd = new_balance * 0.00000738
+        usd = round(usd, 5)
+        euro = new_balance * (0.00000738 * 0.94)
+        euro = round(euro, 5)
+        jpy = new_balance * (0.00000738 * 147.66)
+        jpy = round(jpy, 5)
+        byn = new_balance * (0.000007380 * 2.5)
+        byn = round(byn, 5)
+        print(f"Your balance now:\n{white}{new_balance}{end_code} SHIBA\n"
+              f"{green}{usd}{end_code} USD\n"
+              f"{blue}{euro}{end_code} EURO\n"
+              f"{yellow}{jpy}{end_code} JPY\n"
+              f"{red}{byn}{end_code} BYN")
+
+        with open("transaction.history.csv", "a") as f:
+            f.write(f"\nYou transferred {tr_money} SHIBA to {person}'s account")
+        print(f"You transferred {tr_money} SHIBA to {person}'s account")
+        go_m()
+    elif op == 5:
+
+        history_file = f'transaction.history.csv'
+        with open(history_file, 'r') as f:
+            history = f.read().strip()
+            print(f"{blue}Your transaction history:{end_code} \n{history}")
+            go_m()
+    elif op == 6:
+        new_account()
+    elif op == 7:
+        bye()
+    else:
+        error()
+
+
+# Testing
+menu()
