@@ -1,0 +1,15 @@
+def bd():
+    print ("Dec 2023".center(40))
+    calendar=" "
+    days=["mo","tu", "we", "th","fr", "sa", "su"]
+
+    for d in range (1, 32):
+        day = days[d % 7 - 1]
+        calendar += f" {day} {d}"
+        if d%7==0:
+            calendar+="\n"
+
+    print (calendar)
+
+bd()
+
