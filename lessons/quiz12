@@ -1,0 +1,7 @@
+def num():
+    a = 2
+    b = 6
+    answer = (a - 1) * b + a
+    print(answer)
+
+num()
