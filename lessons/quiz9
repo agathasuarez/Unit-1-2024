@@ -1,0 +1,12 @@
+def ten():
+    names = ["tera", "giga", "mega", "kilo", "unit", "milli", "micro", "nano", "pico"]
+    number = [12, 9, 6, 3, 0, -3, -6, -9, -12]
+
+    min_length = min(len(names), len(number))
+
+    for i in range(min_length):
+        t = number[i]
+        num = 10 ** t
+        print(f"{num} {names[i]}")
+
+ten()
